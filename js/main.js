@@ -26,11 +26,6 @@ const myApp = new Vue ({
       }else{
         this.currentIndex ++;
       }
-    },
-    selectIndicator: function(){
-      console.log(this.currentIndex,this);
-      this.currentIndex = this.index;
-      console.log(this.currentIndex);
     }
   }
 })

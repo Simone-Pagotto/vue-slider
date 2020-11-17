@@ -37,7 +37,7 @@
 					<div class="col d-flex align-items-center">
 							<img v-bind:src="images[currentIndex]" alt="immagine corrente">
 					</div>
-					<div class="col-1 d-flex align-items-center">
+					<div class="col-1 d-flex align-items-center justify-content-flex-start">
 						<a @click="moveNext">
 							<i class="fas fa-chevron-right"></i>
 						</a>
@@ -47,7 +47,7 @@
 				<div class="row">
 					<div class="col d-flex justify-content-center">
 						<ul class="dot-list">
-							<li v-for="(image, index) in images" v-bind:class="index === currentIndex ? 'active' : null" @click="selectIndicator">
+							<li v-for="(image, index) in images" v-bind:class="index === currentIndex ? 'active' : null" @click='currentIndex = index'>
 								<i class="fas fa-circle"></i>
 							</li>
 						</ul>
