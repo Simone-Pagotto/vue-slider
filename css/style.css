@@ -11,3 +11,15 @@
 #root ul{
   list-style: none;
 }
+
+.dot-list li {
+  display: inline;
+}
+
+.active {
+  color: red;
+}
+
+.unactive {
+  color: black;
+}

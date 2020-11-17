@@ -1,10 +1,3 @@
-const images = [
-  'img/image1.jpg',
-  'img/image2.jpg',
-  'img/image3.jpg',
-  'img/image4.jpg',
-]
-
 const myApp = new Vue ({
   el:root,
   data: {
@@ -15,6 +8,7 @@ const myApp = new Vue ({
       'img/image4.jpg',
     ],
     currentIndex: 0
+
   },
   methods: {
     movePrev: function(){
@@ -32,6 +26,11 @@ const myApp = new Vue ({
       }else{
         this.currentIndex ++;
       }
+    },
+    selectIndicator: function(){
+      console.log(this.currentIndex,this);
+      this.currentIndex = this.index;
+      console.log(this.currentIndex);
     }
   }
 })

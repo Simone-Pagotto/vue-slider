@@ -12,10 +12,6 @@
 		<!-- Font Awesome 5.15.1 (CDN) -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
-		<!-- JS Frameworks -->
-		<!-- jQuery 3.5.1 (CDN) -->
-		<!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
-
 		<!-- VUE 2.x development version, includes helpful console warnings -->
 		<!-- CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -50,19 +46,11 @@
 				</div>
 				<div class="row">
 					<div class="col d-flex justify-content-center">
-						<a>
-							<i v-if="currentDot" value="0" class="fas fa-circle"></i>
-						</a>
-						<a>
-							<i value="1" class="fas fa-circle"></i>
-						</a>
-						<a>
-							<i value="2" class="fas fa-circle"></i>
-						</a>
-						<a>
-							<i value="3" class="fas fa-circle"></i>
-						</a>
-
+						<ul class="dot-list">
+							<li v-for="(image, index) in images" v-bind:class="index === currentIndex ? 'active' : null" @click="selectIndicator">
+								<i class="fas fa-circle"></i>
+							</li>
+						</ul>
 					</div>
 
 				</div>
