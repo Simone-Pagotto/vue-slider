@@ -31,7 +31,7 @@
 	<body>
 		<div class="container">
 			<div id="root">
-				<div class="row ">
+				<div class="row d-flex justify-content-center ">
 					<div class="col-1 d-flex align-items-center">
 						<a @click="movePrev">
 							<i class="fas fa-chevron-left"></i>
@@ -39,12 +39,7 @@
 
 					</div>
 					<div class="col d-flex align-items-center">
-							<ul>
-								<li>
-									<img v-bind:src="images[currentIndex]" alt="immagine corrente">
-								</li>
-							</ul>
-
+							<img v-bind:src="images[currentIndex]" alt="immagine corrente">
 					</div>
 					<div class="col-1 d-flex align-items-center">
 						<a @click="moveNext">
@@ -52,6 +47,24 @@
 						</a>
 
 					</div>
+				</div>
+				<div class="row">
+					<div class="col d-flex justify-content-center">
+						<a>
+							<i v-if="currentDot" value="0" class="fas fa-circle"></i>
+						</a>
+						<a>
+							<i value="1" class="fas fa-circle"></i>
+						</a>
+						<a>
+							<i value="2" class="fas fa-circle"></i>
+						</a>
+						<a>
+							<i value="3" class="fas fa-circle"></i>
+						</a>
+
+					</div>
+
 				</div>
 			</div>
 
